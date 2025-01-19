@@ -370,3 +370,111 @@ Foreach ile:
 - Köşeli parantez `[]` kullanılarak tanımlanır.
 - Dizilerin boyutu tanımlandıktan sonra **değiştirilemez**.
 
+
+---
+
+# Methodlar (Methods)
+
+#### **Methodlar Nedir?**
+C# dilinde **methodlar**, yapmak istediğimiz işe hizmet eden kod parçacıklarıdır. Methodlar, kod tekrarını önler ve programlarımızı daha düzenli bir hale getirir.  
+Bir method, belirli bir işlevi yerine getiren ve gerektiğinde parametre alabilen veya değer döndürebilen yapılardır.
+
+---
+
+#### **Method Tanımlama**
+Methodlar belirli bir yapıdadır ve bu yapı aşağıdaki gibi özetlenebilir:
+```csharp
+<erişim_belirleyicisi> <geri_dönüş_tipi> <method_adı>(<parametreler>)
+{
+    // Methodun içindeki işlemler
+}
+```
+
+**Örnek:**
+```csharp
+public static void Merhaba()
+{
+    Console.WriteLine("Merhaba Dünya!");
+}
+```
+
+---
+
+#### **Method Türleri ve Örnekler**
+
+1. **Parametresiz - Geriye Değer Döndürmeyen Method**
+   ```csharp
+   static void Main(string[] args)
+   {
+       // Method çağırma
+       Naber();
+   }
+
+   static void Naber()
+   {
+       // Geriye değer döndürmeyen bir method (void)
+       Console.WriteLine("Selamlar");
+   }
+   ```
+
+   **Çıktı:**
+   ```
+   Selamlar
+   ```
+
+---
+
+2. **Parametre Alan - Geriye Değer Döndürmeyen Method**
+   ```csharp
+   static void Main(string[] args)
+   {
+       // Methodu doğru şekilde parametrelerle çağırıyoruz
+       toplamaYap(5, 7); // 5 ve 7 parametre olarak gönderildi
+   }
+
+   static void toplamaYap(int sayi1, int sayi2)
+   {
+       // Parametrelerle işlem yapıyor
+       Console.WriteLine("Gönderilen sayıların toplamı: " + (sayi1 + sayi2));
+   }
+   ```
+
+   **Çıktı:**
+   ```
+   Gönderilen sayıların toplamı: 12
+   ```
+
+---
+
+3. **Parametre Alan - Geriye Değer Döndüren Method**
+   ```csharp
+   static void Main(string[] args)
+   {
+       // Methodu çağır ve dönen sonucu yazdır
+       int sonuc = carpmaYap(4, 6);
+       Console.WriteLine("Çarpım sonucu: " + sonuc);
+   }
+
+   static int carpmaYap(int sayi1, int sayi2)
+   {
+       // Çarpım işlemini yapıp sonucu döndürür
+       return sayi1 * sayi2;
+   }
+   ```
+
+   **Çıktı:**
+   ```
+   Çarpım sonucu: 24
+   ```
+
+---
+
+#### **Özet**
+- **Parametresiz Methodlar**: Herhangi bir bilgi almadan işlem yapar.
+- **Parametre Alan Methodlar**: İşlem yapmak için belirli değerleri alır.
+- **Geriye Değer Döndüren Methodlar**: İşlemler sonucunda bir değer döndürür.
+- **Void Methodlar**: Geriye hiçbir değer döndürmeyen methodlardır.
+
+---
+
+
