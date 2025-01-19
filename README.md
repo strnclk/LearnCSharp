@@ -265,3 +265,108 @@ foreach (string a in isimler)
 ```
 
 Burada önce bir dizi (koleksiyon) belirledik, bu örnekte `isimler` adlı bir dizi kullanılmıştır.
+
+#  Diziler (Arrays)
+
+#### **Diziler Nedir?**
+C# dilinde **diziler (arrays)**, aynı türdeki birden fazla veriyi bir arada saklamak için kullanılan veri yapılarıdır. Diziler, sabit boyutludur, yani boyutları tanımlandıktan sonra değiştirilemez.
+
+---
+
+#### **Dizilerle İlgili Temel Bilgiler**
+1. **[] Bu işaret dizileri ifade eder.**  
+   Diziler her zaman köşeli parantez `[]` kullanılarak tanımlanır.
+
+2. **Veri tipini uygun tanımlamak gerekir.**  
+   Dizilerde yalnızca tanımlanan veri tipine uygun elemanlar saklanabilir.
+
+3. **Diziler sıfır indeksle başlar.**  
+   Dizilerdeki ilk eleman her zaman `0` indeksine sahiptir.
+
+---
+
+#### **Dizi Tanımlama ve Kullanımı**
+
+1. **Dizi Tanımlama**
+   ```csharp
+   // Boş bir dizi oluşturma (5 elemanlı)
+   int[] sayilar = new int[5];
+   ```
+
+2. **Diziye Değer Atama**
+   ```csharp
+   sayilar[0] = 10; // İlk eleman
+   sayilar[1] = 20; // İkinci eleman
+   ```
+
+3. **Dizi Tanımlama ve Başlatma**
+   ```csharp
+   string[] isimler = { "Ali", "Ayşe", "Fatma" };
+   ```
+
+4. **Dizi Elemanlarına Erişim**
+   ```csharp
+   Console.WriteLine(sayilar[0]); // İlk eleman (10)
+   Console.WriteLine(isimler[1]); // İkinci eleman ("Ayşe")
+   ```
+
+---
+
+#### **Dizi Örneği**
+
+        // Bir dizi tanımlayıp değer atama
+        int[] sayilar = { 5, 10, 15, 20, 25 };
+
+        // Tüm elemanları ekrana yazdırma
+        for (int i = 0; i < sayilar.Length; i++)
+        {
+            Console.WriteLine($"Eleman {i}: {sayilar[i]}");
+        }
+
+        // foreach ile elemanlara erişim
+        Console.WriteLine("Foreach ile:");
+        foreach (int sayi in sayilar)
+        {
+            Console.WriteLine(sayi);
+        }
+```
+
+**Çıktı:**
+```
+Eleman 0: 5
+Eleman 1: 10
+Eleman 2: 15
+Eleman 3: 20
+Eleman 4: 25
+Foreach ile:
+5
+10
+15
+20
+25
+```
+
+---
+
+#### **Dizilerde Önemli Özellikler**
+
+1. **`Length`**: Dizinin eleman sayısını verir.
+   ```csharp
+   Console.WriteLine(sayilar.Length); // 5
+   ```
+
+2. **Çok Boyutlu Diziler**:
+   ```csharp
+   int[,] matris = new int[2, 3]; // 2 satır, 3 sütun
+   matris[0, 0] = 1; // İlk satır, ilk sütun
+   matris[1, 2] = 5; // İkinci satır, üçüncü sütun
+   ```
+
+---
+
+#### **Özet**
+- **Diziler**, birden fazla aynı türdeki veriyi saklamak için kullanılır.
+- Diziler, **sıfır indeksiyle** başlar.
+- Köşeli parantez `[]` kullanılarak tanımlanır.
+- Dizilerin boyutu tanımlandıktan sonra **değiştirilemez**.
+
